@@ -1,7 +1,5 @@
-package Serveur;
 
 import java.rmi.server.UnicastRemoteObject;
-
 import java.rmi.*;
 public class Multiplication extends UnicastRemoteObject implements MultiplicationInterface {
     private int i;

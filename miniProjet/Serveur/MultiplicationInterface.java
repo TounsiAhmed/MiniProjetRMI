@@ -1,4 +1,3 @@
-package Serveur;
 
 import java.rmi.*;
 

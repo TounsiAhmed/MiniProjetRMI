@@ -1,4 +1,4 @@
-package Serveur;
+
 
 import java.rmi.*;
 public interface FactoryInterface extends Remote {
