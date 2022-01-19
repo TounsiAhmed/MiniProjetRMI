@@ -1,5 +1,3 @@
-package Client;
-
 import java.util.Scanner;
 import java.rmi.*;
 public class Client {
@@ -55,7 +53,7 @@ public class Client {
 
         //Calcul de la matrice resultat
         try {
-            FactoryInterface Fac= (FactoryInterface)Naming.lookup("rmi://Factory");
+            FactoryInterface Fac= (FactoryInterface)Naming.lookup("Factory");
             for (int i=0; i<lA; i++){
                 for (int j=0; j<cB; j++){
                     res[i][j]=Fac.cell(i,j).produit(A,B,cA);

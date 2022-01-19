@@ -1,5 +1,3 @@
-package Client;
-
 import java.rmi.*;
 
 public interface MultiplicationInterface extends Remote{
