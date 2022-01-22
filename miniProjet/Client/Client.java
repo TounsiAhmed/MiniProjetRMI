@@ -1,6 +1,18 @@
 import java.util.Scanner;
 import java.rmi.*;
 public class Client {
+
+    public static void afficherMatrice(int[][] m,int ligne, int colonne){
+        for(int i=0;i<ligne;i++)
+        {
+            for(int j=0;j<colonne;j++)
+            {
+                System.out.print(m[i][j]+" ");
+            }
+            System.out.println(); 
+        }
+    }
+
     public static void main(String[] args) {
         int lA,lB,cA,cB;
         
@@ -64,23 +76,25 @@ public class Client {
         }
 
         //Affichage de la matrice resultat
+
+        System.out.println("La multiplication de ");
+        System.out.println();
+        afficherMatrice(A, lA, cA);
+        System.out.println("X");
+        afficherMatrice(B, lB, cB);
+        System.out.println();
         System.out.println("Resultat: ");
         System.out.println();
-        for(int i=0;i<lA;i++)
+        afficherMatrice(res, lA, cB);
+        /*for(int i=0;i<lA;i++)
         {
             for(int j=0;j<cB;j++)
             {
                 System.out.print(res[i][j]+" ");
             }    
             System.out.println();            
-        }
-        
-
-
-
-
-
-        
+        }*/
+           
     }
     
 }
