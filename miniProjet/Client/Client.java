@@ -53,14 +53,14 @@ public class Client {
 
         //Calcul de la matrice resultat
         try {
-            FactoryInterface Fac= (FactoryInterface)Naming.lookup("Factory");
+            FactoryInterface Fac= (FactoryInterface)Naming.lookup("rmi://127.0.0.1:1099/Factory");
             for (int i=0; i<lA; i++){
                 for (int j=0; j<cB; j++){
                     res[i][j]=Fac.cell(i,j).produit(A,B,cA);
                 }
             }
         } catch (Exception e) { 
-            System.out.println("Erreur calcul"+e);    
+            System.out.println("Erreur calcul "+e);    
         }
 
         //Affichage de la matrice resultat
